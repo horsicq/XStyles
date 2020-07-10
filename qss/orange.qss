@@ -4,7 +4,8 @@ QTableView
 
 }
 
-QTreeView::item {
+QTreeView::item 
+{
     color: #FFFFFF;
 }
 
@@ -54,7 +55,8 @@ QMenuBar::item:pressed
 {
     background: #444;
     border: 1px solid #000;
-    background-color: QLinearGradient(
+    background-color: QLinearGradient
+    (
         x1:0, y1:0,
         x2:0, y2:1,
         stop:1 #212121,
@@ -139,7 +141,8 @@ QTextEdit:focus
     border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
 }
 
-QScrollBar:horizontal {
+QScrollBar:horizontal 
+{
      border: 1px solid #222222;
      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0.0 #121212, stop: 0.2 #282828, stop: 1 #484848);
      height: 7px;
@@ -153,7 +156,8 @@ QScrollBar::handle:horizontal
       border-radius: 2px;
 }
 
-QScrollBar::add-line:horizontal {
+QScrollBar::add-line:horizontal 
+{
       border: 1px solid #1b1b19;
       border-radius: 2px;
       background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #ffa02f, stop: 1 #d7801a);
@@ -162,7 +166,8 @@ QScrollBar::add-line:horizontal {
       subcontrol-origin: margin;
 }
 
-QScrollBar::sub-line:horizontal {
+QScrollBar::sub-line:horizontal 
+{
       border: 1px solid #1b1b19;
       border-radius: 2px;
       background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #ffa02f, stop: 1 #d7801a);
@@ -227,7 +232,6 @@ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
       background: white;
 }
 
-
 QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
 {
       background: none;
@@ -237,7 +241,6 @@ QTextEdit
 {
     background-color: #242424;
 }
-
 
 QPlainTextEdit
 {
@@ -292,7 +295,6 @@ QMainWindow::separator
 
 QMainWindow::separator:hover
 {
-
     background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #d7801a, stop:0.5 #b56c17 stop:1 #ffa02f);
     color: white;
     padding-left: 4px;
@@ -328,7 +330,8 @@ QProgressBar::chunk
     width: 2.15px;
 }
 
-QTabBar::tab {
+QTabBar::tab 
+{
     color: #b1b1b1;
     border: 1px solid #444;
     border-bottom-style: none;
@@ -340,7 +343,8 @@ QTabBar::tab {
     margin-right: -1px;
 }
 
-QTabWidget::pane {
+QTabWidget::pane 
+{
     border: 1px solid #444;
     top: 1px;
 }
@@ -353,9 +357,7 @@ QTabBar::tab:last
 
 QTabBar::tab:first:!selected
 {
- margin-left: 0px; /* the last selected tab has nothing to overlap with on the right */
-
-
+    margin-left: 0px; /* the last selected tab has nothing to overlap with on the right */
     border-top-left-radius: 3px;
 }
 
@@ -383,7 +385,8 @@ QTabBar::tab:!selected:hover
     background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434, stop:0.2 #343434, stop:0.1 #ffaa00);
 }
 
-QRadioButton::indicator:checked, QRadioButton::indicator:unchecked{
+QRadioButton::indicator:checked, QRadioButton::indicator:unchecked
+{
     color: #b1b1b1;
     background-color: #323232;
     border: 1px solid #b1b1b1;
@@ -392,7 +395,8 @@ QRadioButton::indicator:checked, QRadioButton::indicator:unchecked{
 
 QRadioButton::indicator:checked
 {
-    background-color: qradialgradient(
+    background-color: qradialgradient
+    (
         cx: 0.5, cy: 0.5,
         fx: 0.5, fy: 0.5,
         radius: 1.0,
@@ -400,7 +404,6 @@ QRadioButton::indicator:checked
         stop: 0.3 #323232
     );
 }
-
 
 QRadioButton::indicator
 {
