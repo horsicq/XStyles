@@ -8,6 +8,7 @@ QToolTip
      font: bold;
      color: red;
 }
+
 QWidget
 {
    Border-color: green;
@@ -17,21 +18,25 @@ QWidget
    Border-style: solid;
    Border-width: 2px;
 }
+
 QLineEdit:hover
 {
     background-color: green;
     color: white;
 }
+
 QWidget:item:hover
 {
     background-color: green;
     color: white;
 }
+
 QWidget:item:selected
 {
     background-color: green;
     color: white;
 }
+
 QDockWidget
 {
    Background-color: grey;
