@@ -409,4 +409,3 @@ QRadioButton::indicator
 {
     border-radius: 6px;
 }
-
