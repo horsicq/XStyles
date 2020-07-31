@@ -59,7 +59,6 @@ QIcon
    Color: white;
 }
 
-
 QMenu
 {
    background-color: black;
@@ -91,7 +90,6 @@ QPushButton, QToolButton
    background-color: #1f1f1f;
    color: green;
 }
-
 
 QPushButton:hover, QToolButton:hover
 {
