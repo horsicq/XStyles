@@ -56,14 +56,7 @@ QMenuBar::item:pressed
 {
     background: #444;
     border: 1px solid #000;
-    background-color: QLinearGradient (
-        x1:0, y1:0,
-        x2:0, y2:1,
-        stop:1 #212121,
-        stop:0.4 #343434/*,
-        stop:0.2 #343434,
-        stop:0.1 #ffaa00*/
-    );
+    background-color: QLinearGradient (x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434/*, stop:0.2 #343434, stop:0.1 #ffaa00*/);
     margin-bottom:-1px;
     padding-bottom:1px;
 }
