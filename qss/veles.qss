@@ -194,12 +194,16 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
 
 QTextEdit
 {
-    background-color: #242424;
+    background-color:native;
+    color:native;
+    border: native;
 }
 
 QPlainTextEdit
 {
-    background-color: #242424;
+    background-color:native;
+    color:native;
+    border: native;
 }
 
 QHeaderView::section
