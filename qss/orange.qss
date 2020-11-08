@@ -1,7 +1,6 @@
 QTableView
 {
      gridline-color: #646464;
-
 }
 
 QTreeView::item 
@@ -11,11 +10,11 @@ QTreeView::item
 
 QToolTip
 {
-     border: 1px solid black;
-     background-color: #ffa02f;
-     padding: 1px;
-     border-radius: 3px;
-     opacity: 100;
+    border: 1px solid black;
+    background-color: #ffa02f;
+    padding: 1px;
+    border-radius: 3px;
+    opacity: 100;
 }
 
 QWidget
