@@ -48,6 +48,7 @@ QMenuBar::item:selected
     background: transparent;
     border: 1px solid #ffaa00;
 }
+
 QMenuBar::item:pressed
 {
     background: #444;
@@ -63,23 +64,28 @@ QMenuBar::item:pressed
     margin-bottom:-1px;
     padding-bottom:1px;
 }
+
 QMenu
 {
     border: 1px solid #000;
 }
+
 QMenu::item
 {
     padding: 2px 20px 2px 20px;
 }
+
 QMenu::item:selected
 {
     color: #000000;
 }
+
 QWidget:disabled
 {
     color: #9c9c9c;
     background-color: #323232;
 }
+
 QAbstractItemView
 {
     background-color: #646464;
