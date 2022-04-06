@@ -1,3 +1,3 @@
 # XStyles
 
-Stales
+Styles
