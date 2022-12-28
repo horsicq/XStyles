@@ -225,3 +225,24 @@ QHeaderView::section
     padding-left: 4px;
     border: 1px solid #6c6c6c;
 }
+
+QMenu
+{
+    border: 1px solid #000;
+}
+
+QMenu::item
+{
+    padding: 2px 20px 2px 20px;
+}
+
+QMenu::item:selected
+{
+    color: #000000;
+}
+
+QWidget:disabled
+{
+    color: #404040;
+    background-color: #323232;
+}
