@@ -65,11 +65,6 @@ QMenu
     border: 1px solid #000;
 }
 
-QMenu::item
-{
-    padding: 2px 20px 2px 20px;
-}
-
 QMenu::item:selected
 {
     color: #000000;
@@ -116,6 +111,12 @@ QPushButton:checked
     background-color: #2d2d2d;
 }
 
+QPushButton:disabled
+{
+    color: #565656;
+    background-color: grey;
+}
+
 QGroupBox:focus
 {
 	border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
@@ -126,7 +127,8 @@ QTextEdit:focus
     border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
 }
 
-QScrollBar:horizontal {
+QScrollBar:horizontal 
+{
      border: 1px solid #222222;
      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0.0 #121212, stop: 0.2 #282828, stop: 1 #484848);
      height: 7px;
