@@ -1,0 +1,44 @@
+name: DB Release
+
+on:
+    push:
+        branches: ["master"]
+    workflow_dispatch:
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Clone XStyles
+              run: |
+                  git clone https://github.com/horsicq/XStyles XStyles
+
+            - name: Create qss.zip
+              if: ${{ hashFiles('XStyles/qss/info.ini') != '' }}
+              run: |
+                  cd XStyles
+                  zip -r ../qss.zip qss
+                  cd ..
+
+            - name: Read qss/info.ini
+              if: ${{ hashFiles('XStyles/qss/info.ini') != '' }}
+              id: qss_info
+              run: |
+                  QSS_INFO=$(cat XStyles/qss/info.ini)
+                  echo "QSS_INFO<<EOF" >> $GITHUB_OUTPUT
+                  echo "$QSS_INFO" >> $GITHUB_OUTPUT
+                  echo "EOF" >> $GITHUB_OUTPUT
+
+            - name: Update qss release
+              if: ${{ hashFiles('XStyles/qss/info.ini') != '' }}
+              uses: softprops/action-gh-release@v1
+              with:
+                  files: qss.zip
+                  name: "qss"
+                  tag_name: qss
+                  body: ${{ steps.qss_info.outputs.QSS_INFO }}
+                  draft: false
+                  prerelease: true
+              env:
+                  GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
