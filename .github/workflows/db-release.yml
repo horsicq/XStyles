@@ -8,6 +8,8 @@ on:
 jobs:
     release:
         runs-on: ubuntu-latest
+        permissions:
+            contents: write
 
         steps:
             - name: Clone XStyles
@@ -32,7 +34,7 @@ jobs:
 
             - name: Update qss release
               if: ${{ hashFiles('XStyles/qss/info.ini') != '' }}
-              uses: softprops/action-gh-release@v1
+              uses: softprops/action-gh-release@v3
               with:
                   files: qss.zip
                   name: "qss"
