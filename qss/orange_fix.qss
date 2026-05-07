@@ -9,7 +9,7 @@ QToolTip
      background-color: #ffa02f;
      padding: 1px;
      border-radius: 3px;
-     opacity: 100;
+     opacity: 1.0;
 }
 
 QWidget
@@ -18,11 +18,7 @@ QWidget
     background-color: #323232;
 }
 
-QWidget:hover
-{
-    border: 1px solid #ca0619;
-}
-
+QWidget:hover,
 QWidget:item:hover
 {
     border: 1px solid #ca0619;
@@ -51,10 +47,10 @@ QMenuBar::item:pressed
     background-color: QLinearGradient(
         x1:0, y1:0,
         x2:0, y2:1,
-        stop:1 #212121,
-        stop:0.4 #343434/*,
-        stop:0.2 #343434,
-        stop:0.1 #ffaa00*/
+        stop: 0 #d7801a,
+        stop: 0.1 #ffaa00,
+        stop: 0.4 #343434,
+        stop: 1 #212121
     );
     margin-bottom:-1px;
     padding-bottom:1px;
@@ -81,14 +77,9 @@ QAbstractItemView
     background-color: #646464;
 }
 
-QWidget:focus
-{
-    /*border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);*/
-}
-
 QLineEdit
 {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #646464, stop: 1 #5d5d5d);
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0.5 #646464, stop: 1 #5d5d5d);
     padding: 1px;
     border-style: solid;
     border: 1px solid #1e1e1e;
@@ -168,7 +159,10 @@ QScrollBar::right-arrow:horizontal, QScrollBar::left-arrow:horizontal
       background: white;
 }
 
-QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical
 {
       background: none;
 }
@@ -208,6 +202,7 @@ QScrollBar::sub-line:vertical
       subcontrol-origin: margin;
 }
 
+QScrollBar::right-arrow:horizontal, QScrollBar::left-arrow:horizontal,
 QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
 {
       border: 1px solid black;
@@ -216,16 +211,7 @@ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
       background: white;
 }
 
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
-{
-      background: none;
-}
-
-QTextEdit
-{
-    background-color: #242424;
-}
-
+QTextEdit,
 QPlainTextEdit
 {
     background-color: #242424;
@@ -234,8 +220,6 @@ QPlainTextEdit
 QHeaderView::section
 {
     color: white;
-    /*padding-left: 4px;
-    border: 1px solid #6c6c6c;*/
 }
 
 QDockWidget::title
@@ -257,7 +241,8 @@ QDockWidget::close-button:hover, QDockWidget::float-button:hover
     background: #242424;
 }
 
-QDockWidget::close-button:pressed, QDockWidget::float-button:pressed
+QDockWidget::close-button:pressed,
+QDockWidget::float-button:pressed
 {
     padding: 1px -1px -1px 1px;
 }
@@ -386,13 +371,6 @@ QRadioButton::indicator
 
 
 
-/* XDeviceTableView
-{
-    background-color: native;
-    color: native;
-    border: native;
-} */
-
 QCheckBox:disabled
 {
     color: #414141;
@@ -406,10 +384,3 @@ QTreeView::item
 {
     color: #FFFFFF;
 }
-
-/*QTreeView 
-{
-    background-color: native;
-    color: native;
-    border: native;
-}*/
